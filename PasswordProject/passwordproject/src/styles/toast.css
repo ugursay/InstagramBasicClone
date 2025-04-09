@@ -1,0 +1,70 @@
+.toast-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Ortalamak için */
+  z-index: 1050; /* Bootstrap modals gibi diğer bileşenlerin üstünde görünmesi için */
+  width: auto;
+  max-width: 90%; /* Mobil cihazlarda daha geniş alan */
+  min-width: 200px; /* Çok küçük olmasını engeller */
+  border-radius: 250px !important;
+}
+
+.toast {
+  background-color: rgb(
+    131,
+    123,
+    121
+  ); /* Kırmızı tonları gibi dikkat çekici renk */
+  color: white;
+  padding: 30px 20px 20px; /* Padding'i artırma */
+  border-radius: 50px !important; /* Border radius yuvarlak */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Gölgeleme etkisini artırma */
+  opacity: 0.8;
+  animation: fadeIn 0.3s ease-out, fadeOut 0.7s ease-in 1.5s !important;
+
+  text-align: center;
+  font-size: 18px; /* Yazı boyutunu büyütme */
+  font-weight: bold; /* Yazıyı kalın yapma */
+  max-width: 400px; /* Maksimum genişlik belirleme */
+  width: 90%; /* Genişliği sınırlama */
+  margin: 0 auto; /* Ortalamak için */
+  z-index: 1050; /* Toast'ın üstte görünmesini sağlama */
+}
+
+.toast:not(.show) {
+  display: inline-block !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Mobil uyum için medya sorgusu */
+@media (max-width: 600px) {
+  .toast-container {
+    top: 10px; /* Daha fazla alanda görünmesi için üstten mesafe kısaltılabilir */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 95%; /* Mobilde daha geniş gösterim */
+  }
+
+  .toast {
+    font-size: 15px; /* Mobil cihazlarda daha küçük yazı tipi */
+    padding: 20px 10px 10px; /* Mobilde daha az padding */
+  }
+}

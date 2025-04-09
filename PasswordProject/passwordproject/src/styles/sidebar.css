@@ -1,0 +1,25 @@
+/* Sidebar CSS */
+.sidebar {
+  width: 200px; /* Sidebar'ın genişliği */
+  height: 100vh; /* Sidebar'ın yüksekliği ekran boyutunda olacak */
+  background-color: #f4f4f4; /* Sidebar'ın arka plan rengi */
+  position: fixed; /* Sabit bir konumda olacak */
+  top: 0;
+  left: 0;
+  padding: 20px; /* Sidebar içindeki boşluk */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+}
