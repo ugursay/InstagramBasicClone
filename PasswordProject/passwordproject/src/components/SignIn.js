@@ -10,7 +10,26 @@ import { useUser } from "../context/UserContext";
 function SignIn() {
   const navigate = useNavigate();
 
-  const { setId, setEmail, setName, setPassword, setOnline, name } = useUser();
+  const {
+    id,
+    setId,
+    email,
+    setEmail,
+    realName,
+    setRealName,
+    name,
+    setName,
+    bio,
+    setBio,
+    image,
+    setImage,
+    password,
+    setPassword,
+    online,
+    setOnline,
+    updateStatus,
+    updateBio,
+  } = useUser();
 
   const onSubmit = async (values) => {
     try {
@@ -23,13 +42,14 @@ function SignIn() {
         // setIsLoggedIn(true);
         setId(user.id);
         setEmail(user.email);
+        setRealName(user.realName);
         setName(user.name);
+        setBio(user.bio);
+        setImage(user.bio);
         setPassword(user.password);
-        setOnline(user.online);
         setOnline(true);
-        console.log("isim", name);
 
-        navigate(`/userpanel/home`);
+        navigate(`/userpanel/profile`);
       } else {
         // setIsLoggedIn(false);
         setOnline(true);

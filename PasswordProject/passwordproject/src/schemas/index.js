@@ -6,6 +6,11 @@ export const signUpSchema = yup.object().shape({
     .string()
     .email("Geçerli bir email giriniz!")
     .required("Kayıt olurken Email girmek zorunludur."),
+  realName: yup
+    .string()
+    .min(5, "İsminiz en az 5 karakter olabilir")
+    .max(95, "İsminiz en fazla 95 karakter olabilir")
+    .required("İsminizi girmek zorunludur"),
   name: yup
     .string()
     .min(2, "Kullanıcı adı en az 2 karakter olabilir")

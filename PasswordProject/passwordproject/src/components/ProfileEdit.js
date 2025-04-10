@@ -6,14 +6,42 @@ import axios from "axios";
 import { signUpSchema } from "../schemas";
 import Toast from "../toast/Toast";
 import { Link } from "react-router-dom";
+import { useUser } from "../context/UserContext";
 import { Navigate, useNavigate } from "react-router-dom";
 
-function SignUp() {
+function ProfileEdit() {
+  const navigate = useNavigate();
+  const {
+    id,
+    setId,
+    email,
+    setEmail,
+    realName,
+    setRealName,
+    name,
+    setName,
+    bio,
+    setBio,
+    image,
+    setImage,
+    password,
+    setPassword,
+    online,
+    setOnline,
+    updateStatus,
+    updateBio,
+  } = useUser();
   const [message, setMessage] = useState("");
   const [showToast, setShowToast] = useState(false);
 
   const onSubmit = async (values, actions) => {
     try {
+      await axios.patch(`http://localhost:5000/users/${id}`, {
+        email: "",
+        realName: "",
+        name: "",
+        password: "",
+      });
       const response = await axios.get(`http://localhost:5000/users`);
       const userExist = response.data.some(
         (user) => user.email === values.email || user.name === values.name
@@ -24,13 +52,29 @@ function SignUp() {
         setShowToast(true);
         actions.resetForm();
       } else {
-        await axios.post(`http://localhost:5000/users`, values);
-        setMessage("Kaydolma Başarılı");
+        await axios.patch(`http://localhost:5000/users/${id}`, {
+          email: values.email,
+          realName: values.realName,
+          name: values.name,
+          password: values.password,
+        });
+        setMessage("Düzenleme Başarılı");
         setShowToast(true);
+
+        setEmail(values.email);
+        setRealName(values.realName);
+        setName(values.name);
+        setPassword(values.password);
+        setOnline(true);
+
         actions.resetForm();
+
+        setTimeout(() => {
+          navigate(-1);
+        }, 2000);
       }
     } catch (error) {
-      setMessage("Kaydolma Başarısız: ", error);
+      setMessage("Düzenleme Başarısız: ", error);
       setShowToast(true);
     }
   };
@@ -45,11 +89,12 @@ function SignUp() {
     touched,
   } = useFormik({
     initialValues: {
-      email: "",
-      realName: "",
-      name: "",
-      password: "",
+      email: email || "",
+      realName: realName || "",
+      name: name || "",
+      password: password || "",
     },
+    enableReinitialize: true,
     validationSchema: signUpSchema,
     onSubmit,
   });
@@ -124,15 +169,18 @@ function SignUp() {
             )}
           </div>
           <button disabled={isSubmitting} type="submit" className="login-btn">
-            Kayıt Ol
+            Düzenlemeyi Kaydet
           </button>
-          {showToast &&
-            (console.log("m", message, showToast),
-            (<Toast message={message} onClose={() => setShowToast(false)} />))}
+          {showToast && (
+            <Toast message={message} onClose={() => setShowToast(false)} />
+          )}
           <div className="text-center mt-3">
-            <p className="text-muted">Zaten Üyeyim</p>
-            <Link to="/" className="btn btn-outline-primary btn-sm">
-              Üye girişi
+            <p className="text-muted">Üye Değilim</p>
+            <Link
+              onClick={() => navigate(-1)}
+              className="btn btn-outline-primary btn-sm"
+            >
+              İptal Et
             </Link>
           </div>
         </form>
@@ -141,4 +189,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default ProfileEdit;

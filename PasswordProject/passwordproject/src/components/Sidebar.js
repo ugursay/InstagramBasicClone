@@ -11,7 +11,7 @@ function Sidebar() {
   updateStatus(id, online);
 
   const handleLogout = async () => {
-    await updateStatus(id, "false");
+    await updateStatus(id, false);
     navigate(`/`);
   };
 
@@ -19,7 +19,7 @@ function Sidebar() {
     <div className="sidebar">
       <ul>
         <li>
-          <Link to={`/userpanel/home`}>home</Link>
+          <Link to={`/userpanel/profile`}>Profile</Link>
         </li>
 
         <li>

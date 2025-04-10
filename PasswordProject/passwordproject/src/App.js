@@ -4,9 +4,10 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import UserPanel from "./components/UserPanel";
 import Sidebar from "./components/Sidebar";
-import Home from "./components/Home"; // Home bileşenini import ettik
+import Home from "./components/Profile"; // Home bileşenini import ettik
 import Settings from "./components/Settings"; // Home bileşenini import ettik
 import { UserProvider } from "./context/UserContext";
+import ProfileEdit from "./components/ProfileEdit";
 // import { UserProvider } from "../context/UserContext";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
 
         {/* Home sayfası */}
         <Route
-          path="/userpanel/home"
+          path="/userpanel/profile"
           element={
             <div className="d-flex" style={{ minHeight: "100vh" }}>
               <Sidebar />
@@ -32,7 +33,20 @@ function App() {
             </div>
           }
         />
-
+        <Route
+          path="/userpanel/profile/profileedit"
+          element={
+            <div className="d-flex" style={{ minHeight: "100vh" }}>
+              <Sidebar />
+              <div
+                className="main-content p-4"
+                style={{ flex: 1, marginLeft: "200px" }}
+              >
+                <ProfileEdit />
+              </div>
+            </div>
+          }
+        />
         {/* UserPanel sayfası */}
         <Route
           path="/userpanel"
