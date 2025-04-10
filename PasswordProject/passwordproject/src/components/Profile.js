@@ -30,9 +30,7 @@ function Profile() {
   } = useUser();
 
   setImage("https://avatars.githubusercontent.com/u/31919688?v=4");
-  setBio(
-    "lorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsu"
-  );
+
   updateStatus(id, online);
   updateBio(id, bio);
   const profileEditButton = () => {

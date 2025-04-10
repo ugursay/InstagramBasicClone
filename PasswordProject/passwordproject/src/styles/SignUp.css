@@ -21,7 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 500px; /* Genişliği %100 yapalım, daha esnek olacak */
+  width: 600px; /* Genişliği %100 yapalım, daha esnek olacak */
   padding: 0 20px; /* Mobilde biraz boşluk eklemek için padding */
   background: #f1f1f1;
   border-radius: 100px;
@@ -34,7 +34,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px; /* Genişliği artırdım */
+  max-width: 450px; /* Genişliği artırdım */
   text-align: center;
   border-radius: 25px;
 }

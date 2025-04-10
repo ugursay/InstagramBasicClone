@@ -3,7 +3,7 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../styles/SignUp.css";
 import { useFormik } from "formik";
 import axios from "axios";
-import { signUpSchema } from "../schemas";
+import { profileEditSchema } from "../schemas";
 import Toast from "../toast/Toast";
 import { Link } from "react-router-dom";
 import { useUser } from "../context/UserContext";
@@ -40,6 +40,7 @@ function ProfileEdit() {
         email: "",
         realName: "",
         name: "",
+        bio: "",
         password: "",
       });
       const response = await axios.get(`http://localhost:5000/users`);
@@ -56,22 +57,25 @@ function ProfileEdit() {
           email: values.email,
           realName: values.realName,
           name: values.name,
+          bio: values.bio,
           password: values.password,
         });
-        setMessage("Düzenleme Başarılı");
-        setShowToast(true);
 
         setEmail(values.email);
         setRealName(values.realName);
         setName(values.name);
+        setBio(values.bio);
         setPassword(values.password);
         setOnline(true);
+
+        setMessage("Düzenleme Başarılı");
+        setShowToast(true);
 
         actions.resetForm();
 
         setTimeout(() => {
           navigate(-1);
-        }, 2000);
+        }, 1000);
       }
     } catch (error) {
       setMessage("Düzenleme Başarısız: ", error);
@@ -91,11 +95,12 @@ function ProfileEdit() {
     initialValues: {
       email: email || "",
       realName: realName || "",
+      bio: bio || "",
       name: name || "",
       password: password || "",
     },
     enableReinitialize: true,
-    validationSchema: signUpSchema,
+    validationSchema: profileEditSchema,
     onSubmit,
   });
 
@@ -111,7 +116,7 @@ function ProfileEdit() {
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder="Mail adresiniz ile kayıt olunuz"
+              placeholder="Yeni Mail adresinizi giriniz"
               className={`input-field ${
                 errors.email && touched.email ? "is-invalid" : ""
               }`}
@@ -127,7 +132,7 @@ function ProfileEdit() {
               value={values.realName}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder="isim ve isteğe bağlı soy isminizi giriniz"
+              placeholder="Yeni isim ve isteğe bağlı soy isminizi giriniz"
               className={`input-field ${
                 errors.realName && touched.realName ? "is-invalid" : ""
               }`}
@@ -143,7 +148,7 @@ function ProfileEdit() {
               value={values.name}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder="Kullanıcı adı oluşturunuz"
+              placeholder="Yeni Kullanıcı adı oluşturunuz"
               className={`input-field ${
                 errors.name && touched.name ? "is-invalid" : ""
               }`}
@@ -154,12 +159,28 @@ function ProfileEdit() {
           </div>
           <div className="input-group">
             <input
+              type="text"
+              id="bio"
+              value={values.bio}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              placeholder="Yeni Biografinizi oluşturunuz"
+              className={`input-field ${
+                errors.bio && touched.bio ? "is-invalid" : ""
+              }`}
+            />
+            {errors.bio && touched.bio && (
+              <div className="invalid-feedback">{errors.bio}</div>
+            )}
+          </div>
+          <div className="input-group">
+            <input
               type="password"
               id="password"
               value={values.password}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder="Şifrenizi giriniz"
+              placeholder="Yeni Şifrenizi giriniz"
               className={`input-field ${
                 errors.password && touched.password ? "is-invalid" : ""
               }`}
@@ -175,7 +196,7 @@ function ProfileEdit() {
             <Toast message={message} onClose={() => setShowToast(false)} />
           )}
           <div className="text-center mt-3">
-            <p className="text-muted">Üye Değilim</p>
+            <p className="text-muted">ya da</p>
             <Link
               onClick={() => navigate(-1)}
               className="btn btn-outline-primary btn-sm"
