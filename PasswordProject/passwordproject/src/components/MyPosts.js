@@ -123,7 +123,9 @@ function MyPosts() {
                 style={{
                   maxWidth: "500px",
                   margin: "auto",
-                  border: "1px solid black",
+                  border: "1px solid #ddd", // Uyumluluk için daha yumuşak bir kenarlık
+                  borderRadius: "8px", // Kenarlarda yumuşak geçiş
+                  boxShadow: "0 4px 8px rgba(0,0,0,0.1)", // Hafif gölge
                 }}
               >
                 <p className="profile-bio" style={{ margin: "10px" }}>
@@ -135,16 +137,16 @@ function MyPosts() {
                       border: "none",
                       outline: "none",
                       width: "100%",
+                      borderRadius: "8px", // İç kenarlıkların yuvarlatılması
                     }}
                     rows={5}
-                  >
-                    {/* {post.content} */}
-                  </textarea>
+                  />
                 </p>
                 <div className="login-card d-flex justify-content-start mt-4">
                   <button
                     onClick={() => deletePost(post.id)}
                     className="btn btn-danger btn-sm me-4"
+                    style={{ flex: "0 0 auto" }}
                   >
                     Sil
                   </button>
@@ -154,14 +156,16 @@ function MyPosts() {
                         ? updatePost(post.id, post.content, post.createdAt)
                         : updatePost(post.id, postInput, post.createdAt)
                     }
-                    className="btn btn-primary btn-sm"
+                    className="btn btn-primary btn-sm me-4"
+                    style={{ flex: "0 0 auto" }}
                   >
                     Güncelle
                   </button>
 
                   <button
                     onClick={() => setPostNotActive(false)}
-                    className="btn btn-primary btn-sm"
+                    className="btn btn-secondary btn-sm"
+                    style={{ flex: "0 0 auto" }}
                   >
                     Düzenle
                   </button>

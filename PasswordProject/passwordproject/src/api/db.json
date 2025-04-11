@@ -12,10 +12,10 @@
     {
       "id": "e4f3",
       "email": "ugursay3211@gmail.com",
-      "realName": "Uğur Yanal",
+      "realName": "Uğur Yanal Sayan",
       "name": "LuckyBoy",
       "bio": "THE DEVELOPERrr",
-      "online": false,
+      "online": true,
       "password": "12345Nn",
       "post": "asdfasdfasdfasfasdfdasf"
     },
@@ -69,13 +69,13 @@
     {
       "id": "0cdf",
       "userId": "8c9a",
-      "content": "ASDFASF",
+      "content": "fasdfasdfsdf",
       "createdAt": "2025-04-11T21:40:58.460Z"
     },
     {
       "id": "39c6",
       "userId": "8c9a",
-      "content": "DFASDFASDF",
+      "content": "BU 2",
       "createdAt": "2025-04-11T21:41:41.821Z"
     }
   ]
