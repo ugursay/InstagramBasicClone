@@ -130,7 +130,7 @@ function MyPosts() {
               >
                 <p className="profile-bio" style={{ margin: "10px" }}>
                   <textarea
-                    value={postNotActive ? post.content : postInput}
+                    value={postNotActive ? post.content : postInput[post.id]}
                     onChange={handleChange}
                     className="profile-bio"
                     style={{
