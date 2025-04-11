@@ -67,3 +67,10 @@ export const profileEditSchema = yup.object().shape({
     })
     .required("Kayıt olurken Şifre girmek zorunludur."),
 });
+
+export const postSchema = yup.object().shape({
+  post: yup
+    .string()
+    .min(2, "Postunuz en az 2 karakter olabilir")
+    .max(300, "Postunuz en fazla 300 karakter olabilir"),
+});

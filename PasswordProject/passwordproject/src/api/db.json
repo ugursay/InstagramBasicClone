@@ -4,56 +4,9 @@
       "id": "ce51",
       "email": "ugursay32111@gmail.com",
       "name": "nur",
-      "password": "12345Nn",
-      "bio": "lorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsu",
+      "realName": "uğur ya",
+      "bio": "lorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ",
       "online": false,
-      "realName": "uğur ya"
-    },
-    {
-      "id": "2d76",
-      "email": "asdf@asdf",
-      "name": "Nuray Yanal",
-      "password": "12345Nn",
-      "bio": "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi repudiandae velit hic, nemo porro laborum, debitis quas id ipsam ipsum quasi pariatur"
-    },
-    {
-      "id": "fc43",
-      "email": "betul@gmail.com",
-      "name": "betul yanal",
-      "password": "Betul123",
-      "online": "false",
-      "bio": "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi repudiandae velit hic, nemo porro laborum, debitis quas id ipsam ipsum quasi pariatur"
-    },
-    {
-      "id": "bc2d",
-      "email": "nuray@gmail.com",
-      "name": "nuray yanal",
-      "password": "Nuray123",
-      "bio": "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi repudiandae velit hic, nemo porro laborum, debitis quas id ipsam ipsum quasi pariatur"
-    },
-    {
-      "id": "14df",
-      "email": "ugursay32@gmail.com",
-      "realName": "uğur yanal",
-      "name": "ugur123",
-      "password": "12345Nn",
-      "online": false,
-      "bio": "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi repudiandae velit hic, nemo porro laborum, debitis quas id ipsam ipsum quasi pariatur"
-    },
-    {
-      "id": "06de",
-      "email": "",
-      "realName": "",
-      "name": "",
-      "password": "",
-      "online": false,
-      "bio": "lorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsu"
-    },
-    {
-      "id": "6803",
-      "email": "ugursay321@gmail.com",
-      "realName": "uğur yanal",
-      "name": "betul",
       "password": "12345Nn"
     },
     {
@@ -61,9 +14,69 @@
       "email": "ugursay3211@gmail.com",
       "realName": "Uğur Yanal",
       "name": "LuckyBoy",
+      "bio": "THE DEVELOPERrr",
+      "online": false,
       "password": "12345Nn",
+      "post": "asdfasdfasdfasfasdfdasf"
+    },
+    {
+      "id": "8c9a",
+      "email": "ugursay30@gmail.com",
+      "realName": "Uğur Yanal",
+      "name": "LuckyBoy2",
+      "password": "12345Nnm",
       "online": true,
       "bio": "THE DEVELOPER"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "userId": "",
+      "content": "",
+      "createdAt": ""
+    },
+    {
+      "id": "905e",
+      "userId": "e4f3",
+      "content": "Cameron ChatGpt",
+      "createdAt": "2025-04-11T21:24:30.965Z"
+    },
+    {
+      "id": "9edb",
+      "userId": "e4f3",
+      "content": "\"id\": \"e4f3\",\n    \"email\": \"ugursay3211@gmail.com\",\n    \"realName\": \"Uğur Yanal\",\n    \"name\": \"LuckyBoy\",\n    \"bio\": \"THE DEVELOPER\",\n    \"online\": true,\n    \"password\": \"12345Nn\",\n    \"post\": \"asdfasdfasdfasfasdfdasf\"",
+      "createdAt": "2025-04-11T21:25:21.851Z"
+    },
+    {
+      "id": "7122",
+      "userId": "e4f3",
+      "content": "Deneme",
+      "createdAt": "2025-04-11T21:36:03.643Z"
+    },
+    {
+      "id": "96d2",
+      "userId": "e4f3",
+      "content": "Deneme yapıyorum",
+      "createdAt": "2025-04-11T21:36:30.520Z"
+    },
+    {
+      "id": "d9c9",
+      "userId": "e4f3",
+      "content": "sdfsdf",
+      "createdAt": "2025-04-11T21:37:07.526Z"
+    },
+    {
+      "id": "0cdf",
+      "userId": "8c9a",
+      "content": "ASDFASF",
+      "createdAt": "2025-04-11T21:40:58.460Z"
+    },
+    {
+      "id": "39c6",
+      "userId": "8c9a",
+      "content": "DFASDFASDF",
+      "createdAt": "2025-04-11T21:41:41.821Z"
     }
   ]
 }

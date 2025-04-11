@@ -21,7 +21,12 @@ function Sidebar() {
         <li>
           <Link to={`/userpanel/profile`}>Profile</Link>
         </li>
-
+        <li>
+          <Link to={`/userpanel/addpost`}>Add Posts</Link>
+        </li>
+        <li>
+          <Link to={`/userpanel/myposts`}>My Posts</Link>
+        </li>
         <li>
           <Link to={`/userpanel/settings`}>Settings</Link>
         </li>

@@ -38,11 +38,13 @@ function Profile() {
   };
 
   return (
-    <div className="profile-container">
+    <div className="login-container">
       <div className="profile-card">
         <img className="profile-image" src={image} alt="Profil" />
         <h1 className="profile-name">{realName}</h1>
-        <h2 className="profile-name">{name}</h2>
+        <h2 className="profile-name" style={{ fontSize: "20px" }}>
+          {name}
+        </h2>
         <p className="profile-email">{email}</p>
         <p className="profile-bio">{bio}</p>
         <p className="profile-bio">

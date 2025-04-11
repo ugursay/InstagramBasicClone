@@ -8,6 +8,9 @@ import Home from "./components/Profile"; // Home bileşenini import ettik
 import Settings from "./components/Settings"; // Home bileşenini import ettik
 import { UserProvider } from "./context/UserContext";
 import ProfileEdit from "./components/ProfileEdit";
+import AddPosts from "./components/AddPosts";
+import MyPosts from "./components/MyPosts";
+
 // import { UserProvider } from "../context/UserContext";
 
 function App() {
@@ -72,6 +75,34 @@ function App() {
                 style={{ flex: 1, marginLeft: "200px" }}
               >
                 <Settings />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/userpanel/addpost"
+          element={
+            <div className="d-flex" style={{ minHeight: "100vh" }}>
+              <Sidebar />
+              <div
+                className="main-content p-4"
+                style={{ flex: 1, marginLeft: "200px" }}
+              >
+                <AddPosts />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/userpanel/myposts"
+          element={
+            <div className="d-flex" style={{ minHeight: "100vh" }}>
+              <Sidebar />
+              <div
+                className="main-content p-4"
+                style={{ flex: 1, marginLeft: "200px" }}
+              >
+                <MyPosts />
               </div>
             </div>
           }
