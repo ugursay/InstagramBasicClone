@@ -12,6 +12,7 @@ export const UserProvider = ({ children }) => {
   const [image, setImage] = useState("");
   const [password, setPassword] = useState("");
   const [online, setOnline] = useState(false); // başlangıç değeri false
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const updateStatus = async (userId, newOnline) => {
     try {
@@ -54,6 +55,8 @@ export const UserProvider = ({ children }) => {
         setOnline,
         updateStatus,
         updateBio,
+        isAdmin,
+        setIsAdmin,
       }}
     >
       {children}

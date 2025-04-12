@@ -14,7 +14,7 @@
       "email": "ugursay3211@gmail.com",
       "realName": "Uğur Yanal Sayan",
       "name": "LuckyBoy",
-      "bio": "THE DEVELOPERrr",
+      "bio": "THE DEVELOPER",
       "online": true,
       "password": "12345Nn",
       "post": "asdfasdfasdfasfasdfdasf"
@@ -24,8 +24,8 @@
       "email": "ugursay30@gmail.com",
       "realName": "Uğur Yanal",
       "name": "LuckyBoy2",
-      "password": "12345Nnm",
-      "online": true,
+      "password": "12345Nn",
+      "online": false,
       "bio": "THE DEVELOPER"
     }
   ],
@@ -37,46 +37,10 @@
       "createdAt": ""
     },
     {
-      "id": "905e",
+      "id": "7b06",
       "userId": "e4f3",
-      "content": "Cameron ChatGpt",
-      "createdAt": "2025-04-11T21:24:30.965Z"
-    },
-    {
-      "id": "9edb",
-      "userId": "e4f3",
-      "content": "Düzelltim",
-      "createdAt": "2025-04-11T21:25:21.851Z"
-    },
-    {
-      "id": "7122",
-      "userId": "e4f3",
-      "content": "Deneme",
-      "createdAt": "2025-04-11T21:36:03.643Z"
-    },
-    {
-      "id": "96d2",
-      "userId": "e4f3",
-      "content": "Deneme yapıyorum",
-      "createdAt": "2025-04-11T21:36:30.520Z"
-    },
-    {
-      "id": "d9c9",
-      "userId": "e4f3",
-      "content": "Yaptımmm",
-      "createdAt": "2025-04-11T21:37:07.526Z"
-    },
-    {
-      "id": "0cdf",
-      "userId": "8c9a",
-      "content": "fasdfasdfsdf",
-      "createdAt": "2025-04-11T21:40:58.460Z"
-    },
-    {
-      "id": "39c6",
-      "userId": "8c9a",
-      "content": "BU 2",
-      "createdAt": "2025-04-11T21:41:41.821Z"
+      "content": "My Blog",
+      "createdAt": "2025-04-12T20:50:34.135Z"
     }
   ]
 }

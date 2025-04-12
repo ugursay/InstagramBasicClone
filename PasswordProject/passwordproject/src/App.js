@@ -10,6 +10,10 @@ import { UserProvider } from "./context/UserContext";
 import ProfileEdit from "./components/ProfileEdit";
 import AddPosts from "./components/AddPosts";
 import MyPosts from "./components/MyPosts";
+import AllUsers from "./components/AllUsers";
+import SidebarAdmin from "./components/SidebarAdmin";
+import AdminProfileEdit from "./components/AdminProfileEdit";
+import AdminProfileEditLast from "./components/AdminProfileEditLast";
 
 // import { UserProvider } from "../context/UserContext";
 
@@ -20,7 +24,6 @@ function App() {
         {/* SignIn ve SignUp sayfaları */}
         <Route path="/" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-
         {/* Home sayfası */}
         <Route
           path="/userpanel/profile"
@@ -103,6 +106,48 @@ function App() {
                 style={{ flex: 1, marginLeft: "200px" }}
               >
                 <MyPosts />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/userpanel/allusers"
+          element={
+            <div className="d-flex" style={{ minHeight: "100vh" }}>
+              <SidebarAdmin />
+              <div
+                className="main-content p-4"
+                style={{ flex: 1, marginLeft: "200px" }}
+              >
+                <AllUsers />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/userpanel/adminprofileedit"
+          element={
+            <div className="d-flex" style={{ minHeight: "100vh" }}>
+              <SidebarAdmin />
+              <div
+                className="main-content p-4"
+                style={{ flex: 1, marginLeft: "200px" }}
+              >
+                <AdminProfileEdit />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/userpanel/adminprofileedit/adminprofileeditlast"
+          element={
+            <div className="d-flex" style={{ minHeight: "100vh" }}>
+              <SidebarAdmin />
+              <div
+                className="main-content p-4"
+                style={{ flex: 1, marginLeft: "200px" }}
+              >
+                <AdminProfileEditLast />
               </div>
             </div>
           }

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { useUser } from "../context/UserContext";
 import { Navigate, useNavigate } from "react-router-dom";
 
-function ProfileEdit() {
+function AdminProfileEditLast() {
   const navigate = useNavigate();
   const {
     id,
@@ -210,4 +210,4 @@ function ProfileEdit() {
   );
 }
 
-export default ProfileEdit;
+export default AdminProfileEditLast;

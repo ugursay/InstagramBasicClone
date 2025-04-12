@@ -29,6 +29,8 @@ function SignIn() {
     setOnline,
     updateStatus,
     updateBio,
+    isAdmin,
+    setIsAdmin,
   } = useUser();
 
   const onSubmit = async (values) => {
@@ -38,7 +40,22 @@ function SignIn() {
         (user) =>
           user.email === values.email && user.password === values.password
       );
-      if (user) {
+
+      if (
+        values.email === "ugursay3211@gmail.com" &&
+        values.password === "12345Nn"
+      ) {
+        setId(user.id);
+        setEmail(user.email);
+        setRealName(user.realName);
+        setName(user.name);
+        setBio(user.bio);
+        setImage(user.bio);
+        setPassword(user.password);
+        setOnline(true);
+        setIsAdmin(true);
+        navigate(`/userpanel/adminprofileedit`);
+      } else if (user) {
         // setIsLoggedIn(true);
         setId(user.id);
         setEmail(user.email);
@@ -47,6 +64,7 @@ function SignIn() {
         setBio(user.bio);
         setImage(user.bio);
         setPassword(user.password);
+        setIsAdmin(false);
         setOnline(true);
 
         navigate(`/userpanel/profile`);

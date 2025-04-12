@@ -87,6 +87,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
   border-radius: 25px;
+  font-size: 20px;
 }
 
 .login-btn:hover {

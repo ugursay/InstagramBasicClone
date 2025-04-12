@@ -46,7 +46,7 @@ function AddPosts() {
       setShowToast(true);
       setTimeout(() => {
         navigate("/userpanel/myposts");
-      }, 1000);
+      }, 750);
     } catch (error) {
       // setIsLoggedIn(false);
       console.log("hat meydana geldi", error);

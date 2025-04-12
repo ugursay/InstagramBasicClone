@@ -4,7 +4,7 @@ import "../styles/Profile.css";
 import { Navigate, useNavigate } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 
-function Profile() {
+function AdminProfileEdit() {
   // const location = useLocation();
   // const { email, id, online } = location.state || {};
   const navigate = useNavigate();
@@ -33,14 +33,14 @@ function Profile() {
 
   updateStatus(id, online);
   updateBio(id, bio);
-
   const profileEditButton = () => {
-    navigate("profileedit");
+    navigate("/userpanel/adminprofileedit/adminprofileeditlast");
   };
 
   return (
     <div className="login-container">
       <div className="profile-card">
+        <h6 className="profile-bio">ADMIN</h6>
         <img className="profile-image" src={image} alt="Profil" />
         <h1 className="profile-name">{realName}</h1>
         <h2 className="profile-name" style={{ fontSize: "20px" }}>
@@ -59,4 +59,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default AdminProfileEdit;
