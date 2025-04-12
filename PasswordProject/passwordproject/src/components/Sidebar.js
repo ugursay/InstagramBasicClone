@@ -27,9 +27,9 @@ function Sidebar() {
         <li>
           <Link to={`/userpanel/myposts`}>My Posts</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to={`/userpanel/settings`}>Settings</Link>
-        </li>
+        </li> */}
       </ul>
       <button onClick={handleLogout} className="login-btn">
         Çıkış Yap
