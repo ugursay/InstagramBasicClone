@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useUser } from "../context/UserContext";
 import "../styles/Profile.css";
 import { Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Toast from "../toast/Toast";
 // import { useLocation } from "react-router-dom";
 
 function AllUsers() {
   // const location = useLocation();
   // const { email, id, online } = location.state || {};
   const navigate = useNavigate();
+  const [users, setUsers] = useState([]);
+
+  const [message, setMessage] = useState("");
+  const [showToast, setShowToast] = useState(false);
+
   const {
     id,
     setId,
@@ -30,39 +36,90 @@ function AllUsers() {
     updateBio,
   } = useUser();
 
+  // const profileEditButton = () => {
+  //   navigate("profileedit");
+  // };
+
   setImage("https://avatars.githubusercontent.com/u/31919688?v=4");
-  updateStatus(id, online);
 
-  const profileEditButton = () => {
-    navigate("profileedit");
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5000/users`);
+        setUsers(response.data);
+      } catch (error) {
+        console.log("Hata meydana geldi", error);
+      }
+    };
+    fetchData();
+  }, [users.length]);
 
-  const fetchData = () => {
-    try {
-    } catch (error) {}
+  const deleteUser = async (deleteId, isAdminMail, userName) => {
+    if (isAdminMail !== email) {
+      try {
+        await axios.delete(`http://localhost:5000/users/${deleteId}`);
+        setUsers((prev) => prev.filter((user) => user.id !== deleteId));
+        setMessage(`Kullanıcı Silindi: ${userName}`);
+        setShowToast(true);
+      } catch (error) {
+        console.log("Kullanıcı Silinemedi", error);
+      }
+    } else {
+      setMessage(`ADMİN SİLİNEMEZ!  ${userName}`);
+      setShowToast(true);
+    }
   };
 
   return (
     <>
-      <div className="login-container">
-        <div className="profile-card">
-          <img className="profile-image" src={image} alt="Profil" />
-          <h1 className="profile-name">{realName}</h1>
-          <h2 className="profile-name" style={{ fontSize: "20px" }}>
-            {name}
-          </h2>
-          <p className="profile-email">{email}</p>
-          <p className="profile-bio">{bio}</p>
-          <p className="profile-bio">
-            Aktifliğim: {!online ? "Çevrimdışı" : "Çevrimiçi"}
-          </p>
-          <button onClick={profileEditButton} className="edit-button">
-            Profili Düzenle
-          </button>
+      <div
+        className="container mt-4"
+        style={{ maxHeight: "100vh", overflowY: "auto" }}
+      >
+        <div className="row justify-content-center">
+          {users.map((user) => (
+            <div key={user.id} className="col-md-4 col-sm-6 mb-4">
+              <div className="card text-center shadow-sm h-100">
+                {console.log(email)}
+                {user.email === email ? "Admin" : ""}
+                <div className="card-body">
+                  <img
+                    className="rounded-circle mb-3"
+                    src={image}
+                    alt="Profil"
+                    width="100"
+                    height="100"
+                  />
+                  <h5 className="card-title">{user.realName}</h5>
+                  <h6 className="text-muted">{user.name}</h6>
+                  <p className="card-text">{user.email}</p>
+                  <p className="card-text">{user.bio}</p>
+                  <p className="card-text">
+                    Aktiflik:{" "}
+                    <span
+                      className={user.online ? "text-success" : "text-danger"}
+                    >
+                      {user.online ? "Çevrimiçi" : "Çevrimdışı"}
+                    </span>
+                  </p>
+                  <button
+                    onClick={() => {
+                      deleteUser(user.id, user.email, user.name);
+                    }}
+                    className="btn btn-danger btn-sm px-4 py-2 fw-bold rounded-pill shadow"
+                  >
+                    🗑 SİL
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
+      {showToast && (
+        <Toast message={message} onClose={() => setShowToast(false)} />
+      )}
     </>
   );
 }
-
 export default AllUsers;

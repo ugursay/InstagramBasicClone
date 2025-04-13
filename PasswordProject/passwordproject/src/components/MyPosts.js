@@ -160,7 +160,7 @@ function MyPosts() {
                       setMessage("Postunuz Silindi 🖊");
                       setShowToast(true);
                     }}
-                    className="btn btn-danger btn-sm me-4"
+                    className="btn btn-danger btn-sm me-4 fw-bold"
                     style={{ flex: "0 0 auto" }}
                   >
                     Sil
@@ -171,19 +171,18 @@ function MyPosts() {
                         ? updatePost(post.id, post.content, post.createdAt)
                         : updatePost(post.id, postInput, post.createdAt);
                     }}
-                    className="btn btn-primary btn-sm me-4"
+                    className="btn btn-primary btn-sm me-4 fw-bold"
                     style={{ flex: "0 0 auto" }}
                   >
                     Güncelle
                   </button>
-
                   <button
                     onClick={() => {
                       setPostNotActive(false);
                       setMessage("Postunuzu Düzenleyebilirsiniz 🖊");
                       setShowToast(true);
                     }}
-                    className="btn btn-secondary btn-sm"
+                    className="btn btn-secondary btn-sm fw-bold fw-bold"
                     style={{ flex: "0 0 auto" }}
                   >
                     Düzenle

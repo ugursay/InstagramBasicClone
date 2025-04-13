@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "ce51",
-      "email": "ugursay32111@gmail.com",
+      "email": "ugursay31@gmail.com",
       "name": "nur",
       "realName": "uğur ya",
       "bio": "lorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ipsulorem ",
@@ -18,15 +18,6 @@
       "online": true,
       "password": "12345Nn",
       "post": "asdfasdfasdfasfasdfdasf"
-    },
-    {
-      "id": "8c9a",
-      "email": "ugursay30@gmail.com",
-      "realName": "Uğur Yanal",
-      "name": "LuckyBoy2",
-      "password": "12345Nn",
-      "online": false,
-      "bio": "THE DEVELOPER"
     }
   ],
   "posts": [
@@ -38,9 +29,15 @@
     },
     {
       "id": "7b06",
-      "userId": "e4f3",
+      "userId": null,
       "content": "My Blog",
       "createdAt": "2025-04-12T20:50:34.135Z"
+    },
+    {
+      "id": "687a",
+      "userId": "ce51",
+      "content": "asdfasdf",
+      "createdAt": "2025-04-13T09:23:03.532Z"
     }
   ]
 }
