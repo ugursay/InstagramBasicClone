@@ -56,7 +56,7 @@ export const profileEditSchema = yup.object().shape({
     .required("Kullanıcı adı girmek zorunludur"),
   bio: yup
     .string()
-    .min(5, "Biografi adı en az 5 karakter olabilir")
+    .min(1, "Biografi adı en az 1 karakter olabilir")
     .max(200, "Kullanıcı adı en fazla 200 karakter olabilir")
     .required("Kullanıcı adı girmek zorunludur"),
   password: yup

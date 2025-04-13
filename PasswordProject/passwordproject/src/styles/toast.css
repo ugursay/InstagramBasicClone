@@ -1,8 +1,9 @@
 .toast-container {
   position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%); /* Ortalamak için */
+  top: 400px;
+  right: 200px;
+  /* left: 50%; */
+  transform: translateX(0);
   z-index: 1050; /* Bootstrap modals gibi diğer bileşenlerin üstünde görünmesi için */
   width: auto;
   max-width: 90%; /* Mobil cihazlarda daha geniş alan */

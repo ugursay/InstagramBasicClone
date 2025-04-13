@@ -15,6 +15,8 @@ function AllUsers() {
   const [message, setMessage] = useState("");
   const [showToast, setShowToast] = useState(false);
 
+  const [wrapAllCards, setWrapAllCards] = useState(12);
+
   const {
     id,
     setId,
@@ -70,6 +72,16 @@ function AllUsers() {
     }
   };
 
+  useEffect(() => {
+    if (users.length === 1) {
+      setWrapAllCards(12); // One user, full-width column
+    } else if (users.length === 2) {
+      setWrapAllCards(6); // Two users, half-width columns
+    } else {
+      setWrapAllCards(4); // More than two users, quarter-width columns
+    }
+  }, [users.length]);
+
   return (
     <>
       <div
@@ -77,43 +89,57 @@ function AllUsers() {
         style={{ maxHeight: "100vh", overflowY: "auto" }}
       >
         <div className="row justify-content-center">
-          {users.map((user) => (
-            <div key={user.id} className="col-md-4 col-sm-6 mb-4">
-              <div className="card text-center shadow-sm h-100">
-                {console.log(email)}
-                {user.email === email ? "Admin" : ""}
-                <div className="card-body">
-                  <img
-                    className="rounded-circle mb-3"
-                    src={image}
-                    alt="Profil"
-                    width="100"
-                    height="100"
-                  />
-                  <h5 className="card-title">{user.realName}</h5>
-                  <h6 className="text-muted">{user.name}</h6>
-                  <p className="card-text">{user.email}</p>
-                  <p className="card-text">{user.bio}</p>
-                  <p className="card-text">
-                    Aktiflik:{" "}
-                    <span
-                      className={user.online ? "text-success" : "text-danger"}
+          {users.length > 0 ? (
+            users.map((user) => (
+              <div
+                key={user.id}
+                className={`col-md-${wrapAllCards} col-sm-6 mb-4`}
+              >
+                <div className="card text-center shadow-sm h-100">
+                  <div className="card-body">
+                    <img
+                      className="rounded-circle mb-3"
+                      src={image}
+                      alt="Profil"
+                      width="100"
+                      height="100"
+                    />
+                    <h5 className="card-title">{user.realName}</h5>
+                    <h6 className="text-muted">{user.name}</h6>
+                    <p className="card-text">{user.email}</p>
+                    <p className="card-text">{user.bio}</p>
+                    <p className="card-text">
+                      Aktiflik:{" "}
+                      <span
+                        className={user.online ? "text-success" : "text-danger"}
+                      >
+                        {user.online ? "Çevrimiçi" : "Çevrimdışı"}
+                      </span>
+                    </p>
+                    <p>
+                      {user.email === email ? (
+                        <span className="badge bg-secondary">Admin</span>
+                      ) : (
+                        <span className="badge bg-info">Kullanıcı</span>
+                      )}
+                    </p>
+                    <button
+                      onClick={() => {
+                        deleteUser(user.id, user.email, user.name);
+                      }}
+                      className="btn btn-danger btn-sm px-4 py-2 fw-bold rounded-pill shadow"
                     >
-                      {user.online ? "Çevrimiçi" : "Çevrimdışı"}
-                    </span>
-                  </p>
-                  <button
-                    onClick={() => {
-                      deleteUser(user.id, user.email, user.name);
-                    }}
-                    className="btn btn-danger btn-sm px-4 py-2 fw-bold rounded-pill shadow"
-                  >
-                    🗑 SİL
-                  </button>
+                      🗑 SİL
+                    </button>
+                  </div>
                 </div>
               </div>
+            ))
+          ) : (
+            <div className="col-12 text-center">
+              <p>Kullanıcı bulunamadı.</p>
             </div>
-          ))}
+          )}
         </div>
       </div>
       {showToast && (

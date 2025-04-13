@@ -42,7 +42,7 @@ function AddPosts() {
         content: values.post,
         createdAt: new Date().toISOString(),
       });
-      setMessage("Postunuz Paylaşılmıştır ♥");
+      setMessage("Postunuz Paylaşılmıştır 📒");
       setShowToast(true);
       setTimeout(() => {
         navigate("/userpanel/myposts");
