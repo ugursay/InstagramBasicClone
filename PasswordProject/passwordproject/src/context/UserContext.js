@@ -4,6 +4,7 @@ import axios from "axios";
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
+  const [editId, setEditId] = useState("");
   const [id, setId] = useState("");
   const [email, setEmail] = useState("");
   const [realName, setRealName] = useState("");
@@ -37,6 +38,8 @@ export const UserProvider = ({ children }) => {
   return (
     <UserContext.Provider
       value={{
+        editId,
+        setEditId,
         id,
         setId,
         email,

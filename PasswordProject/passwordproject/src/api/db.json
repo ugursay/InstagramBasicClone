@@ -2,31 +2,31 @@
   "users": [
     {
       "id": "e4f3",
-      "email": "ugursay3211@gmail.com",
+      "email": "ugursay311@gmail.com",
       "realName": "Uğur Yanal Sayan",
       "name": "LuckyBoy",
-      "bio": "THE DEVELOPER",
+      "bio": "THE LUCKY",
       "online": true,
       "password": "12345Nn",
       "post": "asdfasdfasdfasfasdfdasf"
     },
     {
       "id": "d206",
-      "email": "ugursay31@gmail.com",
-      "realName": "Uğur Yanal",
-      "name": "ugurrrrr",
+      "email": "ugursay32dd11@gmail.com",
+      "realName": "uğur ya",
+      "name": "nuray",
       "password": "12345Nn",
-      "online": true,
-      "bio": "Man"
+      "online": false,
+      "bio": "THE DEVELOPERrr"
     },
     {
       "id": "dc2b",
-      "email": "nuraysayan@gmail.com",
-      "realName": "Nuray Sayan Yanal",
-      "name": "nur",
+      "email": "ugursay3211@gmail.com",
+      "realName": "uğurr",
+      "name": "LuckyBo",
       "password": "12345Nn",
       "online": true,
-      "bio": "Woman"
+      "bio": "THE LUCKY"
     }
   ],
   "posts": [

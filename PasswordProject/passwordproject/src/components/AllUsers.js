@@ -18,6 +18,8 @@ function AllUsers() {
   const [wrapAllCards, setWrapAllCards] = useState(12);
 
   const {
+    editId,
+    setEditId,
     id,
     setId,
     email,
@@ -130,6 +132,18 @@ function AllUsers() {
                       className="btn btn-danger btn-sm px-4 py-2 fw-bold rounded-pill shadow"
                     >
                       🗑 SİL
+                    </button>
+                    <button
+                      onClick={() => {
+                        navigate(
+                          "/userpanel/adminprofileedit/adminprofileeditlast"
+                        );
+                        setEditId(user.id);
+                      }}
+                      className="btn btn-danger btn-sm px-4 py-2 fw-bold rounded-pill shadow"
+                      style={{ marginLeft: "5px" }}
+                    >
+                      🗑 Düzenle
                     </button>
                   </div>
                 </div>
