@@ -133,18 +133,16 @@ function AllUsers() {
                     >
                       🗑 SİL
                     </button>
-                    <button
+                    {/* <button
                       onClick={() => {
-                        navigate(
-                          "/userpanel/adminprofileedit/adminprofileeditlast"
-                        );
+                        navigate("/userpanel/allusers/edituser");
                         setEditId(user.id);
                       }}
                       className="btn btn-danger btn-sm px-4 py-2 fw-bold rounded-pill shadow"
                       style={{ marginLeft: "5px" }}
                     >
                       🗑 Düzenle
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

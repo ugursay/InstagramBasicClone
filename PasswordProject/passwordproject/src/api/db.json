@@ -2,31 +2,22 @@
   "users": [
     {
       "id": "e4f3",
-      "email": "ugursay311@gmail.com",
+      "email": "ugursay3211@gmail.com",
       "realName": "Uğur Yanal Sayan",
-      "name": "LuckyBoy",
-      "bio": "THE LUCKY",
+      "name": "ugur.yanal",
+      "bio": "Jr. Frontend Developer",
       "online": true,
       "password": "12345Nn",
       "post": "asdfasdfasdfasfasdfdasf"
     },
     {
-      "id": "d206",
-      "email": "ugursay32dd11@gmail.com",
-      "realName": "uğur ya",
-      "name": "nuray",
-      "password": "12345Nn",
-      "online": false,
-      "bio": "THE DEVELOPERrr"
-    },
-    {
-      "id": "dc2b",
-      "email": "ugursay3211@gmail.com",
-      "realName": "uğurr",
-      "name": "LuckyBo",
+      "id": "d096",
+      "email": "uguryanal@gmail.com",
+      "realName": "uğur yanal",
+      "name": "ugur123",
       "password": "12345Nn",
       "online": true,
-      "bio": "THE LUCKY"
+      "bio": "THE DEVELOPER"
     }
   ],
   "posts": [
@@ -152,9 +143,105 @@
     },
     {
       "id": "bf03",
-      "userId": "d206",
+      "userId": null,
       "content": "os anis de fani vaynisss",
       "createdAt": "2025-04-13T11:38:26.499Z"
+    },
+    {
+      "id": "4639",
+      "userId": null,
+      "content": "asdfasdfdfd",
+      "createdAt": "2025-04-13T13:00:53.403Z"
+    },
+    {
+      "id": "a435",
+      "userId": null,
+      "content": "birinci post",
+      "createdAt": "2025-04-13T15:00:31.884Z"
+    },
+    {
+      "id": "336d",
+      "userId": null,
+      "content": "ikinci post",
+      "createdAt": "2025-04-13T15:00:38.575Z"
+    },
+    {
+      "id": "944c",
+      "userId": null,
+      "content": "birinci",
+      "createdAt": "2025-04-13T15:04:03.380Z"
+    },
+    {
+      "id": "888a",
+      "userId": null,
+      "content": "ikinci post",
+      "createdAt": "2025-04-13T15:04:09.262Z"
+    },
+    {
+      "id": "3bdb",
+      "userId": null,
+      "content": "birinci post",
+      "createdAt": "2025-04-13T15:05:29.531Z"
+    },
+    {
+      "id": "5c2a",
+      "userId": null,
+      "content": "birinci",
+      "createdAt": "2025-04-13T15:11:55.019Z"
+    },
+    {
+      "id": "ed5e",
+      "userId": null,
+      "content": "ikinci post",
+      "createdAt": "2025-04-13T15:12:01.301Z"
+    },
+    {
+      "id": "5501",
+      "userId": null,
+      "content": "birinci",
+      "createdAt": "2025-04-13T15:19:06.865Z"
+    },
+    {
+      "id": "d408",
+      "userId": null,
+      "content": "ikinci post",
+      "createdAt": "2025-04-13T15:19:13.206Z"
+    },
+    {
+      "id": "fbbb",
+      "userId": null,
+      "content": "ikinci post",
+      "createdAt": "2025-04-13T15:25:37.334Z"
+    },
+    {
+      "id": "016f",
+      "userId": null,
+      "content": "son post",
+      "createdAt": "2025-04-13T15:31:44.435Z"
+    },
+    {
+      "id": "e9fe",
+      "userId": null,
+      "content": "ikinci post",
+      "createdAt": "2025-04-13T15:38:44.502Z"
+    },
+    {
+      "id": "e636",
+      "userId": null,
+      "content": "birinci post",
+      "createdAt": "2025-04-13T15:39:52.365Z"
+    },
+    {
+      "id": "204b",
+      "userId": null,
+      "content": "ikinci post",
+      "createdAt": "2025-04-13T15:49:38.602Z"
+    },
+    {
+      "id": "110f",
+      "userId": "d096",
+      "content": "ikinci post",
+      "createdAt": "2025-04-13T15:56:55.453Z"
     }
   ]
 }

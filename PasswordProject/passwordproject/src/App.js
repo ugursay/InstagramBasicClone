@@ -14,7 +14,6 @@ import AllUsers from "./components/AllUsers";
 import SidebarAdmin from "./components/SidebarAdmin";
 import AdminProfileEdit from "./components/AdminProfileEdit";
 import AdminProfileEditLast from "./components/AdminProfileEditLast";
-import UserEdit from "./components/UserEdit";
 
 // import { UserProvider } from "../context/UserContext";
 
@@ -149,20 +148,6 @@ function App() {
                 style={{ flex: 1, marginLeft: "200px" }}
               >
                 <AdminProfileEditLast />
-              </div>
-            </div>
-          }
-        />
-        <Route
-          path="/userpanel/useredit"
-          element={
-            <div className="d-flex" style={{ minHeight: "100vh" }}>
-              <SidebarAdmin />
-              <div
-                className="main-content p-4"
-                style={{ flex: 1, marginLeft: "200px" }}
-              >
-                <UserEdit />
               </div>
             </div>
           }
